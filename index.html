@@ -94,9 +94,8 @@
 		   margin: 0 !important;
 	}
 	    
-	.img1 {
-		--img1: url(badge.svg) no-repeat;
-		background: var(--img1);
+	.dark {
+		display: none;
 	}
 	    
 	@media (prefers-color-scheme: dark) {
@@ -105,7 +104,13 @@
         	color: white;
 		--primary: black;
 		--shadow-color: rgba(128,128,128,0.2);
-		--img1: url(badgeBlack.svg);
+		.dark {
+			display: block;
+		}
+		
+		.light {
+			display: none;
+		}
     	}
 }
     </style>
@@ -116,7 +121,7 @@
 
 		    <div class="col-md-8">
 		        <h1>
-		                Monochrome Studios
+		                Menochrome Studios
 		        </h1>
 		    </div>
 		    <div class="col-md-2"></div>
@@ -150,27 +155,30 @@
 	                  <div class="card-body">
 	                    <h3 class="card-title">Rating - Rate Everything</h3>
 				 <a href="https://itunes.apple.com/ru/app/rating-rate-everything/id1437744017?l=en&mt=8">
-	                           <input class="img1" type="image" src="badge2.svg"/>
+	                           <input class="light" type="image" src="badge2.svg"/>
+				   <input class="dark" type="image" src="badgeBlack.svg"/>
 	                        </a>
 	                  </div>
 	                </div>
 			    
 			<div class="card two bg-primary" style="width: 196px; height: 314px;">
-	                  <img class="card-img-top img2" src="chroma.svg" alt="IMG HERE">
+	                  <img class="card-img-top" src="chroma.svg" alt="IMG HERE">
 	                  <div class="card-body">
 	                    <h3 class="card-title">Chroma: Simple TV Testing</h3>
 				  <a href="https://itunes.apple.com/us/app/chroma-simple-screen-testing/id1404984004">
-	                           <input type="image" src="badge.svg"/>
+	                           <input class="light" type="image" src="badge2.svg"/>
+				   <input class="dark" type="image" src="badgeBlack.svg"/>
 	                        </a>
 	                  </div>
 	                </div>
 
 	                <div class="card two bg-primary" style="width: 196px; height: 314px;">
-	                  <img class="card-img-top img3" src="future.svg" alt="IMG HERE">
+	                  <img class="card-img-top" src="future.svg" alt="IMG HERE">
 	                  <div class="card-body">
 	                    <h3 class="card-title">Our next project, it's gonna be huge</h3>
 	                        <a>
-	                           <input type="image" src="badge.svg"/>
+	                           <input class="light" type="image" src="badge2.svg"/>
+				   <input class="dark" type="image" src="badgeBlack.svg"/>
 	                        </a>
 	                  </div>
 	                </div>
