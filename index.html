@@ -92,7 +92,12 @@
         .nopadding {
 		   padding: 0 !important;
 		   margin: 0 !important;
-		}
+	}
+	    
+	.img1 {
+		--img1: url(badge.svg) no-repeat;
+		background: var(--img1);
+	}
 	    
 	@media (prefers-color-scheme: dark) {
    		body {
@@ -100,6 +105,7 @@
         	color: white;
 		--primary: black;
 		--shadow-color: rgba(128,128,128,0.2)
+		--img1: url(badgeBlack.svg)
     	}
 }
     </style>
