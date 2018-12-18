@@ -19,14 +19,14 @@
 	:root {
 	    --main-color: white;
 	    --accent-color: black;
-	    --primary: white;
 	    --shadow-color: rgba(0,0,0,0.2);
 	}
 
 	 body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            color: black;
-	    marging: 0;
+	    background-color: var(--main-color);
+            color: var(--accent-color);
+	    margin: 16px 0 0 0;
         }
 	
 	.row {
@@ -35,8 +35,9 @@
 	}
 	
 	.container {
-	    overflow-x: scroll;
-	    overflow-y: auto;
+	    overflow-x: auto;
+	    overflow-y: hidden;
+	    height: 330px;
 	    white-space: nowrap;
   	    -webkit-overflow-scrolling: touch;
 	    margin: 16px 0 0 0;
@@ -98,7 +99,7 @@
 	
 	@media screen and (max-width: 760px){
 	    .row {
-                margin: 0 8px;
+                margin: 0 16px;
 
 	    }
 	
@@ -107,7 +108,15 @@
 	    }
 	
     	}
-	
+
+	@media (prefers-color-scheme: dark) {
+   	    body {
+		--main-color: black;
+		--accent-color: white;
+		--primary: #101010;
+		--shadow-color: rgba(128,128,128,0.2);
+    	    }
+	}
 	
     </style>
     
@@ -166,6 +175,19 @@
   	     </div>
 	</div>
 
-    </div>	
+    </div>
+
+    <div class="row">
+	<h1>
+	    Contacts
+	</h1>
+    </div>
+	
+    <div class="row">
+	<p>
+	    If you have any questions, propositions, or issues to report, please get in touch with us at <a href="mailto:monochromestudios@icloud.com">monochromestudios@icloud.com</a>
+	</p>
+    </div>
+	
   </body>
 </html>
