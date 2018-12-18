@@ -5,9 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap.min.css">
-
     <title>Monochrome Studios</title>
 	  
     <link rel="icon" type="image/png" sizes="32x32" href="32.png">
@@ -15,181 +12,160 @@
     <link rel="mask-icon" href="favicon.svg" color="#ffffff">
 
   </head>
+
   <body>
 
     <style>
-	    
 	:root {
-		--main-color: white;
-		--accent-color: black;
-		--primary: white;
-		--shadow-color: rgba(0,0,0,0.2);
+	    --main-color: white;
+	    --accent-color: black;
+	    --primary: white;
+	    --shadow-color: rgba(0,0,0,0.2);
 	}
-	    
-        body {
+
+	 body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             color: black;
-            padding-top: 24px;
+	    marging: 0;
         }
-        .container-fluid {
-        }
-        .normal {
-        	padding-left: 16px;
-        	padding-right: 16px;
-        }
-        h1 {
+	
+	.row {
+	    margin: 0 18%;
+
+	}
+	
+	.container {
+	    overflow-x: scroll;
+	    overflow-y: auto;
+	    white-space: nowrap;
+  	    -webkit-overflow-scrolling: touch;
+	    margin: 16px 0 0 0;
+	}
+
+	.card {
+	    display: inline-block;
+	    white-space: normal;
+	    width: 196px;
+	    height: 314px;
+	    border-radius: 10px;
+	    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  	    transition: 0.3s;
+	}
+	
+	.first {
+	    margin: 0 0 0 18%;
+	}
+
+	.second {
+	    margin: 0 0 0 16px;
+	}
+
+	.card:hover {
+	    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	}
+
+	.card-container {
+	    padding: 0px 16px;
+
+	}
+
+	.card-image {
+	    border-radius: 10px 10px 0 0;
+	}
+	
+	.badge {
+	    padding: 8px 0px;
+	}
+
+	h1 {
             font-size: 16pt;
             font-weight: 600;
+	    margin: 8px 0 0 0;
         }
-        h2 {
-            padding-top: 16px;
-            font-size: 16pt;
-            font-weight: 600;
-        }
-        h3 {
-            padding-top: 16px;
+
+	h2 {
             font-size: 16px;
             font-weight: 600;
+	    margin: 4px 0;
+
         }
-        .card-container {
-            overflow: auto;
-            white-space:nowrap;
-            position: relative;
-        }
-        .card {
-            border-radius: 10px;
-            border-width: 0px;
-            box-shadow: 0 4px 8px 0 var(--shadow-color);
-            transition: 0.2s;
-            display: inline-block;
-            white-space:normal;
-            margin-top: 8px;
-            margin-bottom: 24px;
-        }
-        .one {
-        	margin-left: 16px;
-        	margin-right: 16px;
-        }
-        .two {
-        	margin-right: 16px;
-        }
-        .card:hover {
-            box-shadow: 0 8px 16px 0 var(--shadow-color);
-        }
-        .card-img-top {
-            border-radius: 10px 10px 0 0;
-            width: 196px;
-            height: 196px;
-        }
-        .card-body {
-            position: relative;
-            bottom: 24px;
-            right: 4px;
-        }
-        .footer {
-            position: relative;
-            bottom: 16px;
-        }
-        .nopadding {
-		   padding: 0 !important;
-		   margin: 0 !important;
+	
+	p {
+	    line-height: 1.5;
+	    margin: 4px 0 4px 0;
+	    
 	}
-	    
+	
+	@media screen and (max-width: 760px){
+	    .row {
+                margin: 0 8px;
 
-	    
-	@media (prefers-color-scheme: dark) {
-   		body {
-        	background-color: #101010;
-        	color: white;
-		--primary: #101010;
-		--shadow-color: rgba(128,128,128,0.2);
+	    }
+	
+	    .first {
+		margin: 0 0 0 16px;
+	    }
+	
     	}
-}
+	
+	
     </style>
+    
+    <div class="row">
+	<h1>
+	    Monochrome Studios
+	</h1>
+    </div>
+	
+    <div class="row">
+	<p>
+	    We are a small Moscow-based development studio that lives and breathes simplistic and intuitive design and innovative user experiences. Currently, we are busy crafting our next masterpiece, in the meantime check out our other apps.
+	</p>
+    </div>
 
-    <div class="container-fluid">
-	    <div class="row">
-		    <div class="col-md-2"></div>
+    <div class="row">
+	<h1>
+	    Apps
+	</h1>
+    </div>
 
-		    <div class="col-md-8">
-		        <h1>
-		                Monochrome Studios
-		        </h1>
-		    </div>
-		    <div class="col-md-2"></div>
-	   	</div>
+    <div class="container">
+	<div class="card first">
+  	    <img class="card-image" src="rating.svg" alt="Avatar">
+  	    <div class="card-container">
+		<h2>
+		    Rating - Rate Everything
+		</h2>
+    		<a href="https://itunes.apple.com/us/app/chroma-simple-screen-testing/id1404984004">
+	            <input class="badge" type="image" src="badge2.svg"/>
+	        </a>
+  	     </div>
+	</div>
 
-	    <div class="row">
-	        <div class="col-md-2"></div>
-	        <div class="col-md-8">
-	            We are a small Moscow-based development studio that lives and breathes simplistic and intuitive design and innovative user experiences. Currently, we are busy crafting our next masterpiece, in the meantime check out our other apps.
-	        </div>
-	        <div class="col-md-2"></div>
-	    </div>
+	<div class="card second">
+  	    <img class="card-image" src="chroma.svg" alt="Avatar">
+  	    <div class="card-container">
+		<h2>
+		    Chroma: Simple TV Testing
+		</h2>
+    		<a href="https://itunes.apple.com/us/app/chroma-simple-screen-testing/id1404984004">
+	            <input class="badge" type="image" src="badge.svg"/>
+	        </a>
+  	     </div>
+	</div>
 
-	    <div class="row">
-	        <div class="col-md-2"></div>
-	        <div class="col-md-8">
-	            <h2>
-	                Apps
-	            </h2>
-	        </div>
-	        <div class="col-md-2"></div>
-	    </div>
+	<div class="card second">
+  	    <img class="card-image" src="future.svg" alt="Avatar">
+  	    <div class="card-container">
+		<h2>
+		    Our next project, it's gonna be huge
+		</h2>
+    		<a href="https://itunes.apple.com/us/app/chroma-simple-screen-testing/id1404984004">
+	            <input class="badge" type="image" src="badge2.svg"/>
+	        </a>
+  	     </div>
+	</div>
 
-	    <div class="row">
-	        <div class="col-md-2"></div>
-	        <div class="col-md-8 nopadding">
-	            <div class="card-container">
-
-	                <div class="card one bg-primary" style="width: 196px; height: 314px;">
-	                  <img class="card-img-top" src="rating.svg" alt="IMG HERE">
-	                  <div class="card-body">
-	                    <h3 class="card-title">Rating - Rate Everything</h3>
-				 <a href="https://itunes.apple.com/ru/app/rating-rate-everything/id1437744017?l=en&mt=8">
-	                           <input class="light" type="image" src="badge2.svg"/>
-	                        </a>
-	                  </div>
-	                </div>
-			    
-			<div class="card two bg-primary" style="width: 196px; height: 314px;">
-	                  <img class="card-img-top" src="chroma.svg" alt="IMG HERE">
-	                  <div class="card-body">
-	                    <h3 class="card-title">Chroma: Simple TV Testing</h3>
-				  <a href="https://itunes.apple.com/us/app/chroma-simple-screen-testing/id1404984004">
-	                           <input class="light" type="image" src="badge.svg"/>
-	                        </a>
-	                  </div>
-	                </div>
-
-	                <div class="card two bg-primary" style="width: 196px; height: 314px;">
-	                  <img class="card-img-top" src="future.svg" alt="IMG HERE">
-	                  <div class="card-body">
-	                    <h3 class="card-title">Our next project, it's gonna be huge</h3>
-	                        <a>
-	                           <input class="light" type="image" src="badge2.svg"/>
-	                        </a>
-	                  </div>
-	                </div>
-
-	            </div>
-	        </div>
-	        <div class="col-md-2"></div>
-	    </div>
-
-	     <div class="row">
-	        <div class="col-md-2"></div>
-	        <div class="col-md-8 footer">
-	            <h2>
-	                Contact
-	            </h2>
-	            If you have any questions, propositions, or issues to report, please get in touch with us at <a href="mailto:monochromestudios@icloud.com">monochromestudios@icloud.com</a>
-
-	        </div>
-	        <div class="col-md-2"></div>
-	    </div>
-
-   </div>
-
+    </div>	
   </body>
 </html>
