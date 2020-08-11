@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Monochrome</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="16.png">
+    <link rel="mask-icon" href="favicon.svg" color="#ffffff">
+
+  </head>
+
+  <body>
+    <style>
+	:root {
+	    --main-color: white;
+	    --accent-color: black;
+	    --shadow-color: rgba(0,0,0,0.2);
+	}
+	
+
+	body {
+        
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	    background-color: var(--main-color);
+        color: var(--accent-color);
+	    margin: 16px 0 16px 0;
+
+    }
+	
+	.scrollable-element {
+  		scrollbar-width: none;
+	}
+
+	::-webkit-scrollbar {
+		width: 0px; 
+		background-color: rgba(0,0,0,0);
+		-webkit-border-radius: 80px;
+	}
+	::-webkit-scrollbar:hover {
+		background-color: rgba(0, 0, 0, 0.09);
+	}
+
+	::-webkit-scrollbar-thumb:vertical {
+ 		background: rgba(0,0,0,0.61);
+		-webkit-border-radius: 80px;
+	}
+	::-webkit-scrollbar-thumb:vertical:active {
+  		background: rgba(0,0,0,0.61);
+  		-webkit-border-radius: 80px;
+	}
+
+	.row {
+	    margin: 0 17.5%;
+
+	}
+
+	#second {
+	    margin-top: 8px;
+	}
+	
+	/*.slider {
+  		width: 300px;
+  		height: 300px;
+  		display: flex;
+  		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+	}
+	.slide {
+		width: 300px;
+		flex-shrink: 0;
+		height: 100%;
+		scroll-snap-align: start;
+	}*/
+
+	.overcontainer {
+	   	height: 346px;
+    	overflow: hidden;
+	}
+
+	.container {
+	    overflow-x: auto;
+	    overflow-y: auto;
+	    height: 340px;
+	    white-space: nowrap;
+  	    -webkit-overflow-scrolling: touch;
+	    margin: 16px 0 0 0;
+	    padding-right: 16px;
+	}
+
+	.card {
+	    display: inline-block;
+	    white-space: normal;
+	    width: 196px;
+	    height: 314px;
+	    border-radius: 10px;
+	    box-shadow: 0 4px 6px 0 var(--shadow-color);
+  	    transition: 0.3s;
+	}
+
+	.first {
+	    margin: 0 0 0 17.5%;
+	}
+
+	.second {
+	    margin: 0 0 0 16px;
+	}
+
+	.card:hover {
+	    box-shadow: 0 8px 16px 0 var(--shadow-color);
+	}
+
+	.card-container {
+	    padding: 4px 16px 4px 16px;
+
+	}
+
+	.card-image {
+	    border-radius: 10px 10px 0 0;
+	    width: 196px;
+		/*-webkit-transform: translate(-50%, -50%);
+  		-ms-transform: translate(-50%, -50%);
+  		transform: translate(-50%, -50%);*/
+	}
+
+	.card-tohovercontainer {
+	    /*border-radius: 10px 10px 0 0;
+	    width: 196px;
+		-webkit-transform: translate(-50%, -50%);
+  		-ms-transform: translate(-50%, -50%);
+  		transform: translate(-50%, -50%);*/
+	}
+	.card-onhoverimage {
+	    opacity: 0;
+  		transition: .5s ease;
+		position: absolute;
+		/*top: 50%;
+	  	left: 50%;*/
+		-webkit-transform: translate(0%, -100%);
+		-ms-transform: translate(0%, -100%);
+		transform: translate(0%, -100%);
+  		/*border-radius: 10px 10px 0 0;
+	    width: 196px;
+		-webkit-transform: translate(-50%, -50%);
+  		-ms-transform: translate(-50%, -50%);
+  		transform: translate(-50%, -50%);*/
+	}
+	.card-tohovercontainer:hover .card-onhoverimage {
+		opacity: 1;
+	}
+
+	.column {
+	float: left;
+	width: 196px;
+	padding: 4px 0px 4px 16px;
+	}
+
+	.container2 {
+	    overflow-x: hidden;
+	    overflow-y:	hidden;
+	    height: 140px;
+	    white-space: nowrap;
+  	    -webkit-overflow-scrolling: touch;
+	    margin: 16px 0 0 0;
+	    padding-right: 16px;
+	}
+
+	.card2 {
+	    display: inline-block;
+	    white-space: normal;
+	    width: 196px;
+	    height: 114px;
+	    border-radius: 10px;
+	    box-shadow: 0 4px 6px 0 var(--shadow-color);
+  	    transition: 0.3s;
+	}
+
+	.card2-container {
+	    padding: 4px 16px 4px 16px;
+
+	}
+
+	a.card2, a.card2:hover {
+	color: inherit;
+	}
+
+
+	.badge {
+	    padding: 8px 0px;
+	}
+
+	h1 {
+            font-size: 16pt;
+            font-weight: 600;
+	    margin: 0 0 0 0;
+        }
+
+	h2 {
+            font-size: 16px;
+            font-weight: 600;
+	    margin: 4px 0;
+
+        }
+
+	p {
+	    line-height: 1.5;
+	    margin: 4px 0 4px 0;
+
+	}
+
+	a {
+	    color: #202020;
+	    font-weight: 600;
+  	    text-decoration: none
+	}
+
+	a:hover {
+  	    text-decoration: underline;
+	}
+
+	@media screen and (max-width: 760px){
+	    .row {
+            margin: 0 16px;
+
+	    }
+
+	    .first {
+		margin: 0 0 0 16px;
+	    }
+
+    }
+
+	@media (prefers-color-scheme: dark) {
+   	    body {
+		--main-color: black;
+		--accent-color: white;
+		--primary: #101010;
+		--shadow-color: rgba(128,128,128,0.2);
+    	    }
+
+	    a {
+		color: #efefef;
+		font-weight: 600;
+	    }
+	}
+
+    </style>
+
+    <div class="row">
+	<h1>
+	    Monochrome
+	</h1>
+    </div>
+
+    <div class="row">
+	<p>
+	    We make simple products with innovative user experience.
+	</p>
+    </div>
+
+    <div class="row" id="second">
+	<h1>
+	    Apps
+	</h1>
+    </div>
+
+	<div class="overcontainer">	
+		<div class="container">
+
+			<div class="card first">
+				<img class="card-image" src="rating10.gif" alt="Avatar">
+				<div class="card-container">
+					<h2>
+						Rating 10 - Rate Everything
+					</h2>
+					<a href="https://apps.apple.com/ru/app/rating10-rate-anything/id1491935617">
+					<input class="badge" type="image" src="badge2.svg"/>
+					</a>
+				</div>
+			</div>
+
+			<div class="card second">
+				<img class="card-image" src="timepeace-v6.gif" alt="Avatar">
+				<div class="card-container">
+					<h2>
+						Timepeace - Time-tracking application
+					</h2>
+					<a href="https://apps.apple.com/app/timepiece-unlimited-timers/id1506052142">
+					<input class="badge" type="image" src="badge2.svg"/>
+					</a>
+				</div>
+			</div>
+
+			<div class="card second">
+
+				<!-- Когда-нибудь это заработает:
+				<div class="card-tohovercontainer">
+					<img class="card-image" src="tapme.gif" alt="Avatar">
+					<div class="card-onhoverimage">
+						<img class="card-image" src="tapme.png" alt="Avatar">
+					</div>
+				</div>-->
+				<img class="card-image" src="tapme.png" alt="Avatar">
+
+				<div class="card-container">
+					<h2>
+						Tap me - repeating notifications
+					</h2>
+					<a href="https://apps.apple.com/tt/app/tap-me-every-x-minutes/id1511695154">
+					<input class="badge" type="image" src="badge2.svg"/>
+					</a>
+				</div>
+			</div>
+
+			<div class="card second">
+				<img class="card-image" src="moodline.gif" alt="Avatar">
+				<div class="card-container">
+					<h2>
+					Moodline - Simple Mood Tracker
+					</h2>
+					<a href="https://apps.apple.com/app/moodline-track-your-mood/id1500129608">
+					<input class="badge" type="image" src="badge2.svg"/>
+					</a>
+				</div>
+			</div>
+			
+			<div class="card second">
+				<img class="card-image" src="rating.svg" alt="Avatar">
+				<div class="card-container">
+					<h2>
+					Rating - Rate Everything
+					</h2>
+					<a href="https://itunes.apple.com/app/rating-rate-everything/id1437744017">
+					<input class="badge" type="image" src="badge2.svg"/>
+					</a>
+				</div>
+			</div>
+
+			<div class="card second">
+				<img class="card-image" src="chroma.svg" alt="Avatar">
+				<div class="card-container">
+					<h2>
+						Chroma - Simple TV Testing
+					</h2>
+					<a href="https://itunes.apple.com/app/chroma-simple-screen-testing/id1404984004">
+					<input class="badge" type="image" src="badge.svg"/>
+					</a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+    <div class="row">
+	<h1>
+	    Contacts
+	</h1>
+    </div>
+
+    <div class="row">
+	<p>
+	    <a href="mailto:monochromestudios@icloud.com">monochromestudios@icloud.com</a>
+	</p>
+	</div>
+
+	<div class="row">
+		<div class="column">
+			<img src="Lex.png" style="height:121px;"><br>
+			<b>Alexey Primechaev</b><br>
+			UX-lead, developer
+		</div>
+		<div class="column">
+			<img src="Flex.png" style="height:121px;"><br>
+			<b>Philipp Dyudin</b><br>
+			CX-lead, manager
+		</div>
+		<div class="column">
+			<img src="Hex.png" style="height:121px;"><br>
+			<b>Igor Dyachuk</b><br>
+			UI-lead, developer
+		</div>
+		
+		<!--
+			<div class="container2">
+				
+					<div class="card2 second">
+						<a href="http://alexeyprimechaev.ru/">
+								<img class="card-image" src="Lex.png" alt="Lex">
+								<div class="card-container">
+								Alexey Primechaev
+								</div>
+						</a>
+					</div>
+		
+					<div class="card2 second">
+						<img class="card-image" src="timepeace-v6.gif" alt="Avatar">
+						<div class="card-container">
+							<h2>
+								Timepeace - Time-tracking application
+							</h2>
+							<a href="https://apps.apple.com/app/timepiece-unlimited-timers/id1506052142">
+							<input class="badge" type="image" src="badge2.svg"/>
+							</a>
+						</div>
+			</div>-->
+	</div>
+
+	<div class="row">
+		<p>
+		<br>
+		</p>
+	</div>
+	 
+
+  </body>
+
+
+</html>
