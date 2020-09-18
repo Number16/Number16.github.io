@@ -131,9 +131,30 @@ We will send invite to you shortly:
 		<div class="response" id="mce-error-response" style="display:none"></div>
 		<div class="response" id="mce-success-response" style="display:none"></div>
 	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c2326dd9c00e85f8d679c708c_0d0f2c71d1" tabindex="-1" value=""></div> -->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c2326dd9c00e85f8d679c708c_0d0f2c71d1" tabindex="-1" value=""></div>
 <br>
-.
+
+
+<script>
+// select the target node
+var target = document.getElementById('mce-success-response');
+
+// create an observer instance
+var observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (target.innerHTML === "Thank you for subscribing!") {
+      target.innerHTML = "Thank you! We will send you the link shortly.";
+    }
+  });
+});
+
+// configuration of the observer:
+var config = { attributes: true, childList: true, characterData: true };
+
+// pass in the target node, as well as the observer options
+observer.observe(target, config);
+</script>
+
     <div class="clear"><input type="submit" value="Request" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
 </form>
