@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Alexey Primechaev",
+        "subtitle": "Human Interface Designer",
+        "image": "https://alexeyprimechaev.ru/img.png"
+    },
+    {
+        "id": 2,
+        "title": "Job",
+        "subtitle": "building.2.crop.circle",
+        "image": "https://alexeyprimechaev.ru/broker.png"
+    },
+    {
+        "id": 3,
+        "title": "Side Job",
+        "subtitle": "person.2",
+        "image": "https://alexeyprimechaev.ru/lekskeks.png"
+    },
+    {
+        "id": 4,
+        "title": "Bachelor",
+        "subtitle": "doc.append",
+        "image": "https://alexeyprimechaev.ru/hse.png"
+    },
+    {
+        "id": 5,
+        "title": "MA Student",
+        "subtitle": "doc.append",
+        "image": "https://alexeyprimechaev.ru/hsedesign.png"
+    },
+    {
+        "id": 6,
+        "title": "Skills",
+        "subtitle": "hammer",
+        "image": "https://alexeyprimechaev.ru/skills.png"
+    }
+]
