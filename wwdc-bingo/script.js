@@ -35,7 +35,7 @@ function setup() {
   imgs_shuffled = imgs_available.sort(() => 0.5 - Math.random());
 
   for (var i = 0; i<25; i++) {
-    imgs.push(loadImage('imgs_shuffled[i] + '.png'));
+    imgs.push(loadImage(imgs_shuffled[i] + '.png'));
   }
 
 
