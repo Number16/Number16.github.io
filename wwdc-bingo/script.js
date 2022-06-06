@@ -61,7 +61,7 @@ function draw() {
 
   if (generate_btn_tapped == true) {
 
-  text('Create your personal WWDC bingo\nat https:/lekskeks.com/wwdc-bingo', c*2.5, c/2);
+  text('Create your personal WWDC bingo\nat lekskeks.com/wwdc-bingo', c*2.5, c/2);
        for (var i = 0; i<5; i++) {
     for (var j = 0; j<5; j++) {
       image(imgs[5*j + i], a + i*b, c + a + j*b, d, d);
