@@ -3,663 +3,148 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>LEKSKEKS</title>
-
-    <link rel="icon" type="image/png" sizes="32x32" href="32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="16.png">
-    <link rel="mask-icon" href="favicon.svg" color="#ffffff">
 
   </head>
 
   <body>
     <style>
 
+        html {
+        height: 100%;
+        }
 
-
-
-body {
+        body {
             background-color: #FFFFFF;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             font-size: 17px;
-            padding: 14px;
-
+            font-weight: 510;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            height: 100%;
+            margin: 0;
         }
 
         .container {
-
-          padding: 70px 0;
-
-          }
-
-          .logo {
-          display: block;
-          /* margin-left: auto;
-          margin-right: auto; */
-              max-width: 100%;
-          }
-          .headlines {
-          width: 100%;
-          text-align: center;
-          padding-top: 16px;
-          padding-bottom: 16px;
-          }
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .tekest {
-          font-size: 24px;
-          display: block;
-          width: 100%;
-          text-align: center;
-          text-decoration: underline;
-        }
-
-        a {
-            display: block;
-            height: 100%;
-            width: 100%;
-            text-decoration: none;
-            color: black;
-        }
-
-        video {
-          	opacity: 0;
-            transition: 0.2s;
-            width: 235px;
-        }
-
-        button {
-            border:none;
-            padding: 0;
-            background-color: transparent;
-        }
-
-        .section {
-            width: 1252px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
-            column-gap: 0px;
-            row-gap: 0px;
-            transition: 0.2s;
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
         }
 
-        .section2 {
-            width: 1252px;
+        .textlink {
+            padding-left: 6px;
+            padding-right: 6px;
+           
+        }
+
+        .text {
+            width: 196px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: 1fr;
-            column-gap: 0px;
-            row-gap: 0px;
-            transition: 0.2s;
-            padding-top: 28px;
-        }
-
-        .sectiontitle {
-            font-size: 34px;
-            font-weight: 700;
-            padding: 14px;
-        }
-        .sectionsubtitle {
-            font-size: 17px;
-            font-weight: 500;
-            padding: 14px;
+            padding-top: 12px;
+            padding-bottom: 12px;
         }
 
         .icon {
-            opacity: 0;
+            width: 32px;
+            height: 32px;
+            padding: 4px;
+            transition: 0.15s;
+
+        }
+
+        .iconlink {
             transition: 0.2s;
-            font-size: 24px;
-            position: absolute;
-            bottom: 21px;
-            right: 14px;
-            font-weight: 300;
+            text-decoration: none;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+        }
+
+       
+
+        .container > div {
+           
+        }
+
+        .avatar {
+            width: 196px;
+            height: 196px;
+            padding-top: 12px;
+            padding-bottom: 12px;
         }
 
 
-        .card {
-            position: relative;
-            width: 257px;
-            height: 257px;
-            background-color: #F2F2F7;
-            padding: 14px;
-            transition: 0.2s;
-            margin: 14px;
+        .textlink:link {
+            color: #007AFF;
         }
 
-        .videocard {
-            position: relative;
-            width: 257px;
-            height: 257px;
-            background-color: #F2F2F7;
-            padding: 14px;
-            transition: 0.2s;
-            margin: 14px;
-	    }
+        .textlink:visited {
+            color: #5856D6;
+        }
 
+        .textlink:hover {
+            color: #0040DD;
+        }
 
-
-        .card:hover {
-            padding: 28px;
-            margin: 0px;
-            margin-bottom: 0px;
+        .iconlink:hover .icon {
+               
+                padding: 0px;
+                width: 40px;
+                height: 40px;
+                transition: 0.15s;
 
         }
 
-        .videocard:hover {
-            padding: 28px;
-            margin: 0px;
-            margin-bottom: 0px;
-
-        }
-
-        .large {
-            display: flex;
-            position: relative;
-            background-color: #F2F2F7;
-            padding: 14px;
-            transition: 0.2s;
-            margin: 14px;
-            grid-column: 1 / 3;
-            grid-row: 1 / 3;
-        }
-
-        .large:hover {
-            padding: 28px;
-            margin: 0px;
-            margin-bottom: 0px;
-
-        }
-
-        .content {
-            transition: 0.2s;
-            font-weight: 500;
-            position: absolute;
-            bottom: 14px;
-            right: 0%;
-            width: 100%;
-            text-align: center;
-        }
-
-        .content2 {
-            transition: 0.2s;
-            font-weight: 500;
-            position: absolute;
-            bottom: 26px;
-            right: 0%;
-            width: 100%;
-            text-align: center;
-        }
-
-        .display {
-            position: relative;
-            top: 14px;
-            transition: 0.2s;
-          	height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .display2 {
-            position: relative;
-            top: -14px;
-            transition: 0.2s;
-          	height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image {
-            position: absolute;
-            top: 0px;
-            transition: 0.2s;
-            width: 183px;
-            margin: auto;
-        }
-
-        .frame {
-            opacity: 0;
-            position: absolute;
-            top: 0px;
-            transition: 0.2s;
-            width: 183px;
-            margin: auto;
-        }
-
-        .imageplaceholder {
-          	position: absolute;
-          	transition: 0.2s;
-            width: 235px;
-        }
-
-        .buttons {
-            opacity: 0;
-            justify-content: center;
-            align-items: center;
-            width: 28px;
-            position: absolute;
-            bottom: 7px;
-            right: 21px;
-            display: block;
-            transition: 0.2s;
-        }
-
-        .secondary {
-            opacity: 0.5;
-            transition: 0.2s;
-        }
-
-        .card:hover .image, .card.hover .image {
-            top: -28px;
-            width: 235px;
-            transition: 0.2s;
-        }
-
-        .card:hover .icon, .card.hover .icon {
-            opacity: 1;
-            transition: 0.2s;
-            bottom: 35px;
-            right: 28px;
-        }
-
-        .card:hover .secondary, .card.hover .secondary {
-            opacity: 0.5;
-        }
-
-        .card:hover .content, .card.hover .content {
-            transition: 0.2s;
-            bottom: 28px;
-        }
-
-        .videocard:hover .frame, .videocard.hover .frame {
-            opacity: 1;
-            position: absolute;
-            top: -14px;
-            width: 286px;
-            transition: 0.2s;
-        }
-
-        .videocard:hover .imageplaceholder, .videocard.hover .imageplaceholder {
-            width: 285px;
-            transition: 0.2s;
-            opacity: 0;
-        }
-
-        .videocard:hover .display2, .videocard.hover .display2 {
-            top: 0px;
-        }
-
-        .videocard:hover .icon, .videocard.hover .icon {
-            opacity: 1;
-            transition: 0.2s;
-            bottom: 35px;
-            right: 28px;
+        .icons {;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            overflow-x: scroll;
         }
 
 
-        .videocard:hover .content, .videocard.hover .content {
-            transition: 0.2s;
-            opacity: 0;
-            bottom: 28px;
-        }
-        .videocard:hover .content2, .videocard.hover .content2 {
-            transition: 0.2s;
-            opacity: 0;
-            bottom: 40px;
-        }
-
-        .videocard:hover video, .videocard.hover video {
-            opacity: 1;
-            transition: 0.2s;
-            width: 283px;
+        .lekskeks {
+            transition: 0.15s;
+            font-weight: 700;
+            text-decoration: none;
+            background-image: url(gradient.png);
+            background-repeat: repeat;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 100px;
+            padding-left: 6px;
+            padding-right: 6px;
         }
 
-        @media screen and (min-width: 1599px) {
-            .section {
-                width: 1600px;
-                grid-template-columns: 20% 20% 20% 20% 20%;
-                column-gap: 0px;
-                padding-left: calc((100% - 1280)/2);
-                padding-right: calc((100% - 1280)/2);
-            }
-            .section2 {
-                width: 1600px;
-                grid-template-columns: 100%;
-                column-gap: 0px;
-                padding-left: calc((100% - 1280)/2);
-                padding-right: calc((100% - 1280)/2);
-            }
+        .lekskeks:hover {
+            transition: 0.15s;
+            font-weight: 700;
+            font-stretch: 115%;
+            padding-left: 0px;
+            padding-right: 0px;
         }
 
-        @media screen and (max-width: 1279px) {
-            .section {
-                width: 960px;
-                grid-template-columns: 33% 33% 33%;
-                column-gap: 0px;
-                padding-left: calc((100% - 960)/2);
-                padding-right: calc((100% - 960)/2);
-            }
-
-            .section2 {
-                width: 960px;
-                grid-template-columns: 100%;
-                column-gap: 0px;
-                padding-left: calc((100% - 960)/2);
-                padding-right: calc((100% - 960)/2);
-            }
-        }
-
-        @media screen and (max-width: 959px) {
-            .section {
-                width: 640px;
-                grid-template-columns: 50% 50%;
-                column-gap: 0px;
-                padding-left: calc((100% - 640)/2);
-                padding-right: calc((100% - 640)/2);
-            }
-
-            .section2 {
-                width: 640px;
-                grid-template-columns: 100%;
-                column-gap: 0px;
-                padding-left: calc((100% - 640)/2);
-                padding-right: calc((100% - 640)/2);
-            }
-
-        }
-
-        @media screen and (max-width: 835px) {
-            .content {
-                font-weight: 600;
-            }
-            .sectiontitle {
-                font-weight: 700;
-            }
+        .links {
+            padding-top: 12px;
+            padding-bottom: 12px;
         }
 
 
-        @media screen and (max-width: 639px) {
-            .section {
-                width: 320px;
-                grid-template-columns: 100%;
-                column-gap: 0px;
-                padding-left: calc((100% - 320)/2);
-                padding-right: calc((100% - 320)/2);
-            }
 
-            .section2 {
-                width: 320px;
-                grid-template-columns: 100%;
-                column-gap: 0px;
-                padding-left: calc((100% - 320)/2);
-                padding-right: calc((100% - 320)/2);
-            }
-        }
-
+        
     </style>
 
 
-  <div class="section2">
-
-
-      <img src="lekskeks.png" class="logo"></img>
-      <!-- <div class="sectionsubtitle">We Make Things</div> -->
-
-
-    <div class="sectiontitle">We Make Things</div>
-    <div class="sectionsubtitle">Here are our most recent projects, as well as work that we're most proud of</div>
-</div>
-<div class="section">
-
-
-    <a href="https://apps.apple.com/app/timepiece-unlimited-timers/id1506052142">
-        <div class="card">
-              <div class="content">
-                  <div class="title">
-                    TimePiece
-                  </div>
-                  <div class="title secondary">
-                    Timers & Time-Tracking
-                  </div>
-              </div>
-              <div class="display">
-                  <img class="image" src="timepiece/icon.png">
-              </div>
-
-              <div class="icon">↗</div>
-          </div>
-      </a>
-
-
-
-
-      <a href="https://apps.apple.com/us/app/moodline-simple-mood-tracking/id1500129608">
-
-          <div class="card">
-              <div class="content">
-                  <div class="title">
-                      Moodline
-                  </div>
-                  <div class="title secondary">
-                      Simple Mood Tracking
-                  </div>
-              </div>
-              <div class="display">
-                  <img class="image" src="moodline/icon.png">
-              </div>
-              <div class="icon">↗</div>
-          </div>
-      </a>
-
-
-
-            <a href="https://apps.apple.com/app/yyyy-do-everything-in-20-mins/id1605477316">
-
-              <div class="card">
-                  <div class="content">
-                      <div class="title">
-                          yyyy
-                      </div>
-                      <div class="title secondary">
-                          Do Everything In 20 Minutes
-                      </div>
-                  </div>
-                  <div class="display">
-                      <img class="image" src="yyyy/icon.png">
-                  </div>
-                  <div class="icon">↗</div>
-              </div>
-          </a>
-
-
-    <a href="https://apps.apple.com/app/reflect-simple-mindfulness/id1578316176">
-
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Reflect
-                </div>
-                <div class="title secondary">
-                    Be Mindful
-                </div>
-            </div>
-            <div class="display">
-                <img class="image" src="reflect/icon.png">
-            </div>
-            <div class="icon">↗</div>
-        </div>
-    </a>
-
-
-
-
-
-
-
-
-</div>
-
-<div class="section2">
-    <div class="sectiontitle">Other Shipped Products</div>
-</div>
-<div class="section">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <a href="https://apps.apple.com/app/2006-camera/id1575592620">
-
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    2006 Camera
-                </div>
-                <div class="title secondary">
-                    Retro Low-Res Camera
-                </div>
-            </div>
-            <div class="display">
-                <img class="image" src="2006/icon.png">
-            </div>
-            <div class="icon">↗</div>
-        </div>
-    </a>
-
-    <a href="https://apps.apple.com/app/tap-me-every-x-minutes/id1511695154">
-
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Tap Me
-                </div>
-                <div class="title secondary">
-                    Repeating Notifications
-                </div>
-            </div>
-            <div class="display">
-                <img class="image" src="tapmeevery/icon.png">
-            </div>
-            <div class="icon">↗</div>
-        </div>
-    </a>
-
-
-
-
-
-
-
-    <a href="https://apps.apple.com/app/rating10-rate-anything/id1491935617">
-
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Rating10
-                </div>
-                <div class="title secondary">
-                    Rate Anything
-                </div>
-            </div>
-            <div class="display">
-                <img class="image" src="rating10/icon.png">
-            </div>
-            <div class="icon">↗</div>
-        </div>
-
-
-
-
-            <a href="https://apps.apple.com/app/readstack-read-later/id1558413561">
-
-                <div class="card">
-                    <div class="content">
-                        <div class="title">
-                            Readstack
-                        </div>
-                        <div class="title secondary">
-                            Stress-free Reading List
-                        </div>
-                    </div>
-                    <div class="display">
-                        <img class="image" src="readstack/icon.png">
-                    </div>
-                    <div class="icon">↗</div>
-                </div>
-            </a>
-
-
-
-    <a href="https://apps.apple.com/app/tinydo-one-task-today/id1554041734">
-
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    TinyDo
-                </div>
-                <div class="title secondary">
-                    A Teeny-Tiny To-Do App
-                </div>
-            </div>
-            <div class="display">
-                <img class="image" src="tinydo/icon.png">
-            </div>
-            <div class="icon">↗</div>
-        </div>
-    </a>
-
-
-
-
-
-
-
-
-
-<a href="https://apps.apple.com/us/app/chroma-2-simple-tv-testing/id1523800402">
-
-    <div class="card">
-        <div class="content">
-            <div class="title">
-                Chroma 2.0
-            </div>
-            <div class="title secondary">
-                For TV
-            </div>
-        </div>
-        <div class="display">
-            <img class="image" src="chroma/icon.png">
-            </div>
-            <div class="icon">↗</div>
+    <div class="container">
+        <img src="lekskeks.png" class="avatar">
     </div>
-</a>
 
-
-</div>
+    
+    
+    
   </body>
-
-
 </html>
