@@ -35,7 +35,7 @@ function setup() {
   fill(255); // Set the text color to white
   textSize(30);
   textAlign(CENTER);
-  text('WWDC BINGO', w/2, h/10 + 0);
+  text('WWDC BINGO GENERATOR', w/2, h/10 + 0);
   
     textSize(16);
     textAlign(CENTER);
