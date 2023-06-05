@@ -35,7 +35,11 @@ function setup() {
   fill(255); // Set the text color to white
   textSize(30);
   textAlign(CENTER);
-  text('WWDC BINGO', w/2, h/10 + 10);
+  text('WWDC BINGO', w/2, h/10 + 0);
+  
+    textSize(16);
+    textAlign(CENTER);
+    text('Generate your own at lekskeks.com/wwdc-bingo', w/2, h/10 + 25);
 
   let a = w / 125.0;
   let b = w / 5.0 - w/500;
