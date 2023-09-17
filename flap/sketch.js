@@ -70,7 +70,7 @@ function displayScore() {
   text(score, width/2, 30);
 }
 
-function mousePressed() {
+function touchStarted() {
     autoPlay = false;
     jumpBird();
 }
