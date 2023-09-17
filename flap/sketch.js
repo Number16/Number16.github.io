@@ -17,6 +17,13 @@ function setup() {
   bird = new Bird();
   pipes.push(new Pipe());
   noStroke();
+
+    // Add touchstart event listener to the canvas
+  canvas.elt.addEventListener('touchstart', function (event) {
+    event.preventDefault(); // Prevent default behavior
+    autoPlay = false;
+    jumpBird();
+  });
 }
 
 
