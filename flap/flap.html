@@ -31,7 +31,11 @@
             width: 80%; /* or whatever width you desire */
             height: 300px; /* or your desired height */
             border: 1px solid #ccc;
+            -webkit-overflow-scrolling: touch;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
         }
+
     </style>
 </head>
 <body>
@@ -41,7 +45,7 @@
     <div>This will only take a moment</div>
     
     <!-- Your iframe goes here. I've added a placeholder iframe for now -->
-    <iframe src="index.html"></iframe>
+    <iframe src="index.html" scrolling="no"></iframe>
 </div>
 
 </body>
